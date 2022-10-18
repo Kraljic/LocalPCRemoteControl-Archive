@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textMediaControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Media Control"
+                android:textColor="@color/colorSectionTitle"
+                android:textSize="25dp" />
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                style="@style/ImageButtonTheme"
+                android:layout_below="@+id/textMediaControl"
+                android:layout_centerHorizontal="true"
+                android:onClick="btnPlay_onClick"
+                android:src="@android:drawable/ic_media_play" />
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                style="@style/ImageButtonTheme"
+                android:layout_alignBottom="@+id/btnPlay"
+                android:layout_toLeftOf="@+id/btnPlay"
+                android:onClick="btnPrev_onClick"
+                android:src="@android:drawable/ic_media_previous" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                style="@style/ImageButtonTheme"
+                android:layout_alignBottom="@+id/btnPlay"
+                android:layout_toRightOf="@+id/btnPlay"
+                android:onClick="btnNext_onClick"
+                android:src="@android:drawable/ic_media_next" />
+
+
+            <ImageButton
+                android:id="@+id/btnMute"
+                style="@style/ImageButtonTheme"
+                android:layout_below="@+id/btnPlay"
+                android:layout_centerHorizontal="true"
+                android:onClick="btnMute_onClick"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/mute_icon" />
+
+            <ImageButton
+                android:id="@+id/btnVolUp"
+                style="@style/ImageButtonTheme"
+                android:layout_alignBottom="@+id/btnMute"
+                android:layout_toRightOf="@id/btnMute"
+                android:onClick="btnVolUp_onClick"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/vol_up" />
+
+            <ImageButton
+                android:id="@+id/btnVolDown"
+                style="@style/ImageButtonTheme"
+                android:layout_alignBottom="@+id/btnMute"
+                android:layout_toLeftOf="@id/btnMute"
+                android:onClick="btnVolDown_onClick"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/vol_down" />
+
+
+            <TextView
+                android:id="@+id/txtSubtitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnMute"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Subtitles"
+                android:textColor="@color/colorSectionTitle"
+                android:textSize="25dp" />
+
+            <ImageButton
+                android:id="@+id/btnChangeSubtitles"
+                style="@style/ImageButtonTheme"
+                android:layout_below="@+id/txtSubtitles"
+                android:layout_centerHorizontal="true"
+                android:onClick="btnChangeSubtitles_onClick"
+                android:src="@android:drawable/stat_notify_sync" />
+
+            <TextView
+                android:id="@+id/txtPcControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnChangeSubtitles"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="PC Control"
+                android:textColor="@color/colorSectionTitle"
+                android:textSize="25dp" />
+
+
+            <LinearLayout
+                android:id="@+id/linLayoutPcControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPcControl"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    style="@style/ImageButtonTheme"
+                    android:id="@+id/btnLock"
+                    android:layout_below="@+id/txtPcControl"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="btnLock_onClick"
+                    android:src="@android:drawable/ic_lock_idle_lock" />
+
+                <ImageButton
+                    style="@style/ImageButtonTheme"
+                    android:id="@+id/btnPowerOff"
+                    android:layout_below="@+id/btnLock"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="btnPowerOff_onClick"
+                    android:padding="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/power" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txtServer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linLayoutPcControl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Server"
+                android:textColor="@color/colorSectionTitle"
+                android:textSize="25dp" />
+
+
+            <ImageButton
+                android:id="@+id/btnDiscoverServer"
+                style="@style/ImageButtonTheme"
+                android:layout_below="@+id/txtServer"
+                android:layout_centerHorizontal="true"
+                android:onClick="btnDiscoverServer_onClick"
+                android:src="@android:drawable/ic_menu_search" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
